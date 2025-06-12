@@ -1,3 +1,0 @@
-fragment TestComponentData on TestComponent {
-  Text
-}
