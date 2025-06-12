@@ -11,6 +11,7 @@
     "build:full": "graphql-codegen && opti-fx pull && next build && opti-graph webhook:create",
     "start": "next start",
     "lint": "next lint",
+    "scaffold": "yarn opti-cms nextjs:create",
     "compile": "graphql-codegen",
     "watch": "graphql-codegen -w",
     "flags:pull": "opti-fx pull",
