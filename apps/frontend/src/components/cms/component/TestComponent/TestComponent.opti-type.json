@@ -1,0 +1,24 @@
+{
+  "key": "TestComponent",
+  "displayName": "Test Component",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [
+    "elementEnabled"
+  ],
+  "properties": {
+    "Text": {
+      "type": "string",
+      "displayName": "Text",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    }
+  }
+}

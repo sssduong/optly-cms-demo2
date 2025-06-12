@@ -37,6 +37,8 @@ type Documents = {
     "fragment ParagraphElementData on ParagraphElement {\n  text {\n    json\n  }\n}": typeof types.ParagraphElementDataFragmentDoc,
     "fragment QuoteBlockData on QuoteBlock {\n  quote: QuoteText\n  color: QuoteColor\n  active: QuoteActive\n  name: QuoteProfileName\n  profilePicture: QuoteProfilePicture {\n    ...ReferenceData\n  }\n  location: QuoteProfileLocation\n}": typeof types.QuoteBlockDataFragmentDoc,
     "fragment RichTextElementData on RichTextElement {\n  text {\n    json\n    html\n  }\n}": typeof types.RichTextElementDataFragmentDoc,
+    "fragment SoCardData on SoCard {\n  Image {\n    ...ReferenceData\n  }\n  Heading\n  Teaser {\n    json\n    html\n  }\n  Link {\n    ...LinkData\n  }\n}": typeof types.SoCardDataFragmentDoc,
+    "fragment TestComponentData on TestComponent {\n  Text\n}": typeof types.TestComponentDataFragmentDoc,
     "fragment TestimonialElementData on TestimonialElement {\n  customerName\n  customerLocation\n  customerImage {\n    ...ReferenceData\n  }\n  referenceTitle\n  referenceText {\n    json\n  }\n}": typeof types.TestimonialElementDataFragmentDoc,
     "fragment TextBlockData on TextBlock {\n  overline: TextBlockOverline\n  headingSize: TextBlockHeadingSize\n  heading: TextBlockHeading\n  description: TextBlockDescription {\n    json\n    html\n  }\n  center: TextCenter\n  width: TextBlockWidth\n  className: TextClassName\n}": typeof types.TextBlockDataFragmentDoc,
     "fragment VideoElementData on VideoElement {\n  title\n  video {\n    ...ReferenceData\n  }\n  placeholder {\n    ...ReferenceData\n  }\n}": typeof types.VideoElementDataFragmentDoc,
@@ -86,6 +88,8 @@ const documents: Documents = {
     "fragment ParagraphElementData on ParagraphElement {\n  text {\n    json\n  }\n}": types.ParagraphElementDataFragmentDoc,
     "fragment QuoteBlockData on QuoteBlock {\n  quote: QuoteText\n  color: QuoteColor\n  active: QuoteActive\n  name: QuoteProfileName\n  profilePicture: QuoteProfilePicture {\n    ...ReferenceData\n  }\n  location: QuoteProfileLocation\n}": types.QuoteBlockDataFragmentDoc,
     "fragment RichTextElementData on RichTextElement {\n  text {\n    json\n    html\n  }\n}": types.RichTextElementDataFragmentDoc,
+    "fragment SoCardData on SoCard {\n  Image {\n    ...ReferenceData\n  }\n  Heading\n  Teaser {\n    json\n    html\n  }\n  Link {\n    ...LinkData\n  }\n}": types.SoCardDataFragmentDoc,
+    "fragment TestComponentData on TestComponent {\n  Text\n}": types.TestComponentDataFragmentDoc,
     "fragment TestimonialElementData on TestimonialElement {\n  customerName\n  customerLocation\n  customerImage {\n    ...ReferenceData\n  }\n  referenceTitle\n  referenceText {\n    json\n  }\n}": types.TestimonialElementDataFragmentDoc,
     "fragment TextBlockData on TextBlock {\n  overline: TextBlockOverline\n  headingSize: TextBlockHeadingSize\n  heading: TextBlockHeading\n  description: TextBlockDescription {\n    json\n    html\n  }\n  center: TextCenter\n  width: TextBlockWidth\n  className: TextClassName\n}": types.TextBlockDataFragmentDoc,
     "fragment VideoElementData on VideoElement {\n  title\n  video {\n    ...ReferenceData\n  }\n  placeholder {\n    ...ReferenceData\n  }\n}": types.VideoElementDataFragmentDoc,
@@ -218,6 +222,14 @@ export function gql(source: "fragment QuoteBlockData on QuoteBlock {\n  quote: Q
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(source: "fragment RichTextElementData on RichTextElement {\n  text {\n    json\n    html\n  }\n}"): (typeof documents)["fragment RichTextElementData on RichTextElement {\n  text {\n    json\n    html\n  }\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment SoCardData on SoCard {\n  Image {\n    ...ReferenceData\n  }\n  Heading\n  Teaser {\n    json\n    html\n  }\n  Link {\n    ...LinkData\n  }\n}"): (typeof documents)["fragment SoCardData on SoCard {\n  Image {\n    ...ReferenceData\n  }\n  Heading\n  Teaser {\n    json\n    html\n  }\n  Link {\n    ...LinkData\n  }\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment TestComponentData on TestComponent {\n  Text\n}"): (typeof documents)["fragment TestComponentData on TestComponent {\n  Text\n}"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

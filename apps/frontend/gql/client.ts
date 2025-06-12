@@ -308,6 +308,26 @@ export const RichTextElementDataFragmentDoc = gql`
   }
 }
     `;
+export const SoCardDataFragmentDoc = gql`
+    fragment SoCardData on SoCard {
+  Image {
+    ...ReferenceData
+  }
+  Heading
+  Teaser {
+    json
+    html
+  }
+  Link {
+    ...LinkData
+  }
+}
+    `;
+export const TestComponentDataFragmentDoc = gql`
+    fragment TestComponentData on TestComponent {
+  Text
+}
+    `;
 export const TestimonialElementDataFragmentDoc = gql`
     fragment TestimonialElementData on TestimonialElement {
   customerName
@@ -378,6 +398,8 @@ export const ContinueReadingComponentDataFragmentDoc = gql`
     ...ParagraphElementData
     ...QuoteBlockData
     ...RichTextElementData
+    ...SoCardData
+    ...TestComponentData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -409,6 +431,8 @@ export const CarouselBlockDataFragmentDoc = gql`
     ...ParagraphElementData
     ...QuoteBlockData
     ...RichTextElementData
+    ...SoCardData
+    ...TestComponentData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -438,6 +462,8 @@ export const CompositionComponentNodeDataFragmentDoc = gql`
     ...ParagraphElementData
     ...QuoteBlockData
     ...RichTextElementData
+    ...SoCardData
+    ...TestComponentData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -519,6 +545,8 @@ export const BlogPostPageDataFragmentDoc = gql`
     ...ParagraphElementData
     ...QuoteBlockData
     ...RichTextElementData
+    ...SoCardData
+    ...TestComponentData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -563,6 +591,8 @@ export const LandingPageDataFragmentDoc = gql`
     ...ParagraphElementData
     ...QuoteBlockData
     ...RichTextElementData
+    ...SoCardData
+    ...TestComponentData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -587,6 +617,8 @@ export const LandingPageDataFragmentDoc = gql`
     ...ParagraphElementData
     ...QuoteBlockData
     ...RichTextElementData
+    ...SoCardData
+    ...TestComponentData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -691,6 +723,8 @@ ${PageSeoSettingsDataFragmentDoc}
 ${ParagraphElementDataFragmentDoc}
 ${QuoteBlockDataFragmentDoc}
 ${RichTextElementDataFragmentDoc}
+${SoCardDataFragmentDoc}
+${TestComponentDataFragmentDoc}
 ${TestimonialElementDataFragmentDoc}
 ${TextBlockDataFragmentDoc}
 ${VideoElementDataFragmentDoc}
@@ -1093,6 +1127,8 @@ export const getContentByIdDocument = gql`
       ...ParagraphElementData
       ...QuoteBlockData
       ...RichTextElementData
+      ...SoCardData
+      ...TestComponentData
       ...TestimonialElementData
       ...TextBlockData
       ...VideoElementData
@@ -1133,6 +1169,8 @@ ${PageSeoSettingsDataFragmentDoc}
 ${ParagraphElementDataFragmentDoc}
 ${QuoteBlockDataFragmentDoc}
 ${RichTextElementDataFragmentDoc}
+${SoCardDataFragmentDoc}
+${TestComponentDataFragmentDoc}
 ${TestimonialElementDataFragmentDoc}
 ${TextBlockDataFragmentDoc}
 ${VideoElementDataFragmentDoc}
@@ -1200,6 +1238,8 @@ ${PageSeoSettingsDataFragmentDoc}
 ${ParagraphElementDataFragmentDoc}
 ${QuoteBlockDataFragmentDoc}
 ${RichTextElementDataFragmentDoc}
+${SoCardDataFragmentDoc}
+${TestComponentDataFragmentDoc}
 ${TestimonialElementDataFragmentDoc}
 ${TextBlockDataFragmentDoc}
 ${VideoElementDataFragmentDoc}
