@@ -82,6 +82,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head>
         <Scripts.Header experimentationAllowOverride={ !forceDisableOverride } />
         { enableDemoTools && <link key="dynamic-styles" rel="stylesheet" href="/main.css" ></link> }
+
+        { /*
+        Temporary Styles from Sports Orbit (demo only)
+        TODO: Load up only necessary Bootstrap styles via SASS (pre-compiled)
+        */}
+        <link rel="stylesheet" href="https://sports-orbit.symsoftsolutions.com/css/cagov.core.min.css" />
+        <link rel="stylesheet" href="https://sports-orbit.symsoftsolutions.com/css/chp-custom.css" />
+        <link rel="stylesheet" href="https://sports-orbit.symsoftsolutions.com/css/colortheme-oceanside.min.css" />
       </head>
       <ThemeProvider value={{ theme: "system" }}>
         <Body className={`${figtree.className} on-ghost-white overflow-x-hidden`}>
