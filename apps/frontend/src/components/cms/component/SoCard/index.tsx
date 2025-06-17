@@ -1,6 +1,7 @@
 import { type CmsComponent } from "@remkoj/optimizely-cms-react";
+import { RichText } from "@remkoj/optimizely-cms-react/rsc";
 import { SoCardDataFragmentDoc, type SoCardDataFragment } from "@/gql/graphql";
-
+import Link from "next/link";
 /**
  * Card - Sports Orbit
  * A card for Sports Orbit
@@ -19,19 +20,15 @@ export const SoCardComponent : CmsComponent<SoCardDataFragment> = ({ data, child
         {/* SO Card Markup */}
         <div className="card h-100 pos-rel">
           <img className="card-img" alt="" src="/siteassets/images/gameinsight.jpg"/>
-          <div className="card-body d-block h-100 ">
-            <h3 className="card-title">
-              Know the Game
-            </h3>
-            <div className="color-gray-dark text-left">
 
-              <p>New to the game or need a refresher? Explore the rules of soccer, football,
-                baseball, and more with easy-to-follow guides. Master the basics and become a pro at understanding every
-                play!</p>
+          <div className="card-body d-block h-100 ">
+            <h3 className="card-title">{ data.Heading }</h3>
+
+            <div className="color-gray-dark text-left">
+              <RichText text={ data.Teaser?.json } />
             </div>
-            <a href="/link/80cb334b73864e919dda630746b24975.aspx" className="mt-3 d-inline-block">
-              Read More
-            </a>
+
+            <Link href={ data.Link.default } className="mt-3 d-inline-block">Read More</Link>
           </div>
         </div>
       </div>
