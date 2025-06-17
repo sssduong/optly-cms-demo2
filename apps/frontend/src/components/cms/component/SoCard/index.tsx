@@ -1,9 +1,11 @@
 import { type CmsComponent } from "@remkoj/optimizely-cms-react";
 import { RichText } from "@remkoj/optimizely-cms-react/rsc";
 import { SoCardDataFragmentDoc, type SoCardDataFragment } from "@/gql/graphql";
-import Link from "next/link";
+// import Link from "next/link";
 // import Image from "next/image";
 import Image from "@/components/shared/cms_image";
+import Link from "@/components/shared/cms_link";
+
 /**
  * Card - Sports Orbit
  * A card for Sports Orbit
@@ -28,7 +30,7 @@ export const SoCardComponent : CmsComponent<SoCardDataFragment> = ({ data, child
               <RichText text={ data.Teaser?.json } />
             </div>
 
-            <Link href={ data.Link?.default } className="mt-3 d-inline-block">Read More</Link>
+            <Link href={{ url: data.Link, text: "Read More" }} className="mt-3 d-inline-block" />
           </div>
         </div>
     );
