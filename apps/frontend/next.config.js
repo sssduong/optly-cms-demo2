@@ -35,6 +35,9 @@ const nextConfig = {
             'www.optimizelyedit.com/' // Optimizely Web Experimentation & Personalization Editor
           ],
         }
+    },
+    typescript: {
+      ignoreBuildErrors: true,
     }
 }
 

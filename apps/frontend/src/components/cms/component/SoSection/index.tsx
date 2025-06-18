@@ -12,11 +12,11 @@ export const SoSectionComponent : CmsComponent<SoSectionDataFragment> = ({ data,
     <div className={clsx('section', data.Modifiers)}>
       <div className="container">
         {data.Row?.map((row, rowIdx) => (
-          <div key={ rowIdx } className={ clsx('row', row.Modifiers) }>
+          <div key={ rowIdx } className={ clsx('row', row?.Modifiers) }>
             {row.Column?.map((column, colIdx) => (
-              <div className={ clsx('col', column.ColumnClasses) }>
+              <div key={ colIdx } className={ clsx('col', column?.ColumnClasses) }>
                 {column.ColumnContent?.map((content, contentIdx) => (
-                  <SoCardComponent data={content} />
+                  <SoCardComponent key={ contentIdx } data={ content } />
                 ))}
               </div>
             ))}
