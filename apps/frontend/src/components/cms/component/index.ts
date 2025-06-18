@@ -4,6 +4,9 @@ import { type ComponentTypeDictionary } from "@remkoj/optimizely-cms-react";
 import VideoElementComponent from "./VideoElement";
 import TextBlockComponent from "./TextBlock";
 import TestimonialElementComponent from "./TestimonialElement";
+import SoSectionComponent from "./SoSection";
+import SoRowComponent from "./SoRow";
+import SoColumnComponent from "./SoColumn";
 import SoCardComponent from "./SoCard";
 import RichTextElementComponent from "./RichTextElement";
 import QuoteBlockComponent from "./QuoteBlock";
@@ -42,6 +45,18 @@ export const ComponentFactory : ComponentTypeDictionary = [
     { 
         type: "TestimonialElement", 
         component: TestimonialElementComponent 
+    },
+    { 
+        type: "SoSection", 
+        component: SoSectionComponent 
+    },
+    { 
+        type: "SoRow", 
+        component: SoRowComponent 
+    },
+    { 
+        type: "SoColumn", 
+        component: SoColumnComponent 
     },
     { 
         type: "SoCard", 

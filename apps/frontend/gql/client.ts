@@ -323,6 +323,50 @@ export const SoCardDataFragmentDoc = gql`
   }
 }
     `;
+export const SoColumnDataFragmentDoc = gql`
+    fragment SoColumnData on SoColumn {
+  ColumnClasses
+  ColumnContent {
+    ...IContentListItem
+    ...ImageMediaComponentData
+    ...VideoMediaComponentData
+  }
+}
+    `;
+export const SoColumnPropertyDataFragmentDoc = gql`
+    fragment SoColumnPropertyData on SoColumnProperty {
+  ColumnClasses
+  ColumnContent {
+    ...IContentListItem
+    ...ImageMediaComponentData
+    ...VideoMediaComponentData
+  }
+}
+    `;
+export const SoRowDataFragmentDoc = gql`
+    fragment SoRowData on SoRow {
+  Modifiers
+  Column {
+    ...SoColumnPropertyData
+  }
+}
+    `;
+export const SoRowPropertyDataFragmentDoc = gql`
+    fragment SoRowPropertyData on SoRowProperty {
+  Modifiers
+  Column {
+    ...SoColumnPropertyData
+  }
+}
+    `;
+export const SoSectionDataFragmentDoc = gql`
+    fragment SoSectionData on SoSection {
+  Modifiers
+  Row {
+    ...SoRowPropertyData
+  }
+}
+    `;
 export const TestimonialElementDataFragmentDoc = gql`
     fragment TestimonialElementData on TestimonialElement {
   customerName
@@ -394,6 +438,9 @@ export const ContinueReadingComponentDataFragmentDoc = gql`
     ...QuoteBlockData
     ...RichTextElementData
     ...SoCardData
+    ...SoColumnData
+    ...SoRowData
+    ...SoSectionData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -426,6 +473,9 @@ export const CarouselBlockDataFragmentDoc = gql`
     ...QuoteBlockData
     ...RichTextElementData
     ...SoCardData
+    ...SoColumnData
+    ...SoRowData
+    ...SoSectionData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -456,6 +506,9 @@ export const CompositionComponentNodeDataFragmentDoc = gql`
     ...QuoteBlockData
     ...RichTextElementData
     ...SoCardData
+    ...SoColumnData
+    ...SoRowData
+    ...SoSectionData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -538,6 +591,9 @@ export const BlogPostPageDataFragmentDoc = gql`
     ...QuoteBlockData
     ...RichTextElementData
     ...SoCardData
+    ...SoColumnData
+    ...SoRowData
+    ...SoSectionData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -583,6 +639,9 @@ export const LandingPageDataFragmentDoc = gql`
     ...QuoteBlockData
     ...RichTextElementData
     ...SoCardData
+    ...SoColumnData
+    ...SoRowData
+    ...SoSectionData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -608,6 +667,9 @@ export const LandingPageDataFragmentDoc = gql`
     ...QuoteBlockData
     ...RichTextElementData
     ...SoCardData
+    ...SoColumnData
+    ...SoRowData
+    ...SoSectionData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -713,6 +775,11 @@ ${ParagraphElementDataFragmentDoc}
 ${QuoteBlockDataFragmentDoc}
 ${RichTextElementDataFragmentDoc}
 ${SoCardDataFragmentDoc}
+${SoColumnDataFragmentDoc}
+${SoRowDataFragmentDoc}
+${SoColumnPropertyDataFragmentDoc}
+${SoSectionDataFragmentDoc}
+${SoRowPropertyDataFragmentDoc}
 ${TestimonialElementDataFragmentDoc}
 ${TextBlockDataFragmentDoc}
 ${VideoElementDataFragmentDoc}
@@ -1116,6 +1183,9 @@ export const getContentByIdDocument = gql`
       ...QuoteBlockData
       ...RichTextElementData
       ...SoCardData
+      ...SoColumnData
+      ...SoRowData
+      ...SoSectionData
       ...TestimonialElementData
       ...TextBlockData
       ...VideoElementData
@@ -1157,6 +1227,11 @@ ${ParagraphElementDataFragmentDoc}
 ${QuoteBlockDataFragmentDoc}
 ${RichTextElementDataFragmentDoc}
 ${SoCardDataFragmentDoc}
+${SoColumnDataFragmentDoc}
+${SoRowDataFragmentDoc}
+${SoColumnPropertyDataFragmentDoc}
+${SoSectionDataFragmentDoc}
+${SoRowPropertyDataFragmentDoc}
 ${TestimonialElementDataFragmentDoc}
 ${TextBlockDataFragmentDoc}
 ${VideoElementDataFragmentDoc}
@@ -1225,6 +1300,11 @@ ${ParagraphElementDataFragmentDoc}
 ${QuoteBlockDataFragmentDoc}
 ${RichTextElementDataFragmentDoc}
 ${SoCardDataFragmentDoc}
+${SoColumnDataFragmentDoc}
+${SoRowDataFragmentDoc}
+${SoColumnPropertyDataFragmentDoc}
+${SoSectionDataFragmentDoc}
+${SoRowPropertyDataFragmentDoc}
 ${TestimonialElementDataFragmentDoc}
 ${TextBlockDataFragmentDoc}
 ${VideoElementDataFragmentDoc}
