@@ -1,4 +1,7 @@
 fragment SoColumnPropertyData on SoColumnProperty {
   ColumnClasses
-  ColumnContent { ...IContentListItem }
+  ColumnContent {
+      ...IContentListItem
+      ...BlockData
+  }
 }

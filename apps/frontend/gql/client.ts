@@ -333,24 +333,6 @@ export const SoColumnDataFragmentDoc = gql`
   }
 }
     `;
-export const SoColumnPropertyDataFragmentDoc = gql`
-    fragment SoColumnPropertyData on SoColumnProperty {
-  ColumnClasses
-  ColumnContent {
-    ...IContentListItem
-    ...ImageMediaComponentData
-    ...VideoMediaComponentData
-  }
-}
-    `;
-export const SoRowDataFragmentDoc = gql`
-    fragment SoRowData on SoRow {
-  Modifiers
-  Column {
-    ...SoColumnPropertyData
-  }
-}
-    `;
 export const SoRowPropertyDataFragmentDoc = gql`
     fragment SoRowPropertyData on SoRowProperty {
   Modifiers
@@ -409,6 +391,50 @@ export const BlankSectionDataFragmentDoc = gql`
     fragment BlankSectionData on BlankSection {
   _metadata {
     key
+  }
+}
+    `;
+export const SoColumnPropertyDataFragmentDoc = gql`
+    fragment SoColumnPropertyData on SoColumnProperty {
+  ColumnClasses
+  ColumnContent {
+    ...IContentListItem
+    ...BlockData
+    ...ImageMediaComponentData
+    ...VideoMediaComponentData
+    ...ArticleListElementData
+    ...ButtonBlockData
+    ...CTAElementData
+    ...CarouselBlockData
+    ...ContentRecsElementData
+    ...ContinueReadingComponentData
+    ...HeadingElementData
+    ...HeroBlockData
+    ...ImageElementData
+    ...LayoutSettingsBlockData
+    ...MegaMenuGroupBlockData
+    ...MenuNavigationBlockData
+    ...OdpEmbedBlockData
+    ...PageSeoSettingsData
+    ...ParagraphElementData
+    ...QuoteBlockData
+    ...RichTextElementData
+    ...SoCardData
+    ...SoColumnData
+    ...SoRowData
+    ...SoSectionData
+    ...TestimonialElementData
+    ...TextBlockData
+    ...VideoElementData
+    ...BlankSectionData
+  }
+}
+    `;
+export const SoRowDataFragmentDoc = gql`
+    fragment SoRowData on SoRow {
+  Modifiers
+  Column {
+    ...SoColumnPropertyData
   }
 }
     `;
