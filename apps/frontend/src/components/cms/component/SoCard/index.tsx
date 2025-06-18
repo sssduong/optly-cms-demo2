@@ -1,8 +1,6 @@
 import { type CmsComponent } from "@remkoj/optimizely-cms-react";
 import { RichText } from "@remkoj/optimizely-cms-react/rsc";
 import { SoCardDataFragmentDoc, type SoCardDataFragment } from "@/gql/graphql";
-// import Link from "next/link";
-// import Image from "next/image";
 import Image from "@/components/shared/cms_image";
 import Link from "@/components/shared/cms_link";
 
@@ -10,9 +8,7 @@ import Link from "@/components/shared/cms_link";
  * Card - Sports Orbit
  * A card for Sports Orbit
  */
-export const SoCardComponent : CmsComponent<SoCardDataFragment> = ({ data, children }) => {
-    const componentName = 'Card - Sports Orbit';
-    const componentInfo = 'A card for Sports Orbit';
+export const SoCardComponent : CmsComponent<SoCardDataFragment> = ({ data }) => {
     return (
         <div className="card h-100 pos-rel">
           <Image
