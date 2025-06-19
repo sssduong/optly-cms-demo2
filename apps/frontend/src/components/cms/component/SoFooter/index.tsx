@@ -1,21 +1,26 @@
 import { type CmsComponent } from "@remkoj/optimizely-cms-react";
+import { RichText } from "@remkoj/optimizely-cms-react/rsc";
 import { SoFooterDataFragmentDoc, type SoFooterDataFragment } from "@/gql/graphql";
 
 /**
  * Footer - Sports Orbit
- * 
+ *
  */
 export const SoFooterComponent : CmsComponent<SoFooterDataFragment> = ({ data, children }) => {
-    const componentName = 'Footer - Sports Orbit'
-    const componentInfo = ''
-    return <div className="w-full border-y border-y-solid border-y-slate-900 py-2 mb-4">
-        <div className="font-bold italic">{ componentName }</div>
-        <div>{ componentInfo }</div>
-        { Object.getOwnPropertyNames(data).length > 0 && <pre className="w-full overflow-x-hidden font-mono text-sm bg-slate-200 p-2 rounded-sm border border-solid border-slate-900 text-slate-900">{ JSON.stringify(data, undefined, 4) }</pre> }
-        { children && <div className="mt-4 mx-4 flex flex-col">{ children }</div>}
-    </div>
+    return (
+        /* TODO: Use section component */
+        <footer className="p-b-md p-t-sm section-standout site-footer d-print-none">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-4"><RichText text={ data.ColumnTextOne?.json } /></div>
+              <div className="col-md-4"><RichText text={ data.ColumnTextTwo?.json } /></div>
+              <div className="col-md-4"><RichText text={ data.ColumnTextThree?.json } /></div>
+            </div>
+          </div>
+        </footer>
+    )
 }
-SoFooterComponent.displayName = "Footer - Sports Orbit (Component/SoFooter)"
-SoFooterComponent.getDataFragment = () => ['SoFooterData', SoFooterDataFragmentDoc]
+SoFooterComponent.displayName = "Footer - Sports Orbit (Component/SoFooter)";
+SoFooterComponent.getDataFragment = () => ['SoFooterData', SoFooterDataFragmentDoc];
 
-export default SoFooterComponent
+export default SoFooterComponent;
