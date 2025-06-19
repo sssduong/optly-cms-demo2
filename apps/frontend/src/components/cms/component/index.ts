@@ -6,6 +6,7 @@ import TextBlockComponent from "./TextBlock";
 import TestimonialElementComponent from "./TestimonialElement";
 import SoSectionComponent from "./SoSection";
 import SoRowComponent from "./SoRow";
+import SoFooterComponent from "./SoFooter";
 import SoColumnComponent from "./SoColumn";
 import SoCardComponent from "./SoCard";
 import RichTextElementComponent from "./RichTextElement";
@@ -53,6 +54,10 @@ export const ComponentFactory : ComponentTypeDictionary = [
     { 
         type: "SoRow", 
         component: SoRowComponent 
+    },
+    { 
+        type: "SoFooter", 
+        component: SoFooterComponent 
     },
     { 
         type: "SoColumn", 

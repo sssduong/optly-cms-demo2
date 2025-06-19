@@ -333,6 +333,22 @@ export const SoColumnDataFragmentDoc = gql`
   }
 }
     `;
+export const SoFooterDataFragmentDoc = gql`
+    fragment SoFooterData on SoFooter {
+  ColumnTextOne {
+    json
+    html
+  }
+  ColumnTextTwo {
+    json
+    html
+  }
+  ColumnTextThree {
+    json
+    html
+  }
+}
+    `;
 export const SoRowPropertyDataFragmentDoc = gql`
     fragment SoRowPropertyData on SoRowProperty {
   Modifiers
@@ -421,6 +437,7 @@ export const SoColumnPropertyDataFragmentDoc = gql`
     ...RichTextElementData
     ...SoCardData
     ...SoColumnData
+    ...SoFooterData
     ...SoRowData
     ...SoSectionData
     ...TestimonialElementData
@@ -465,6 +482,7 @@ export const ContinueReadingComponentDataFragmentDoc = gql`
     ...RichTextElementData
     ...SoCardData
     ...SoColumnData
+    ...SoFooterData
     ...SoRowData
     ...SoSectionData
     ...TestimonialElementData
@@ -500,6 +518,7 @@ export const CarouselBlockDataFragmentDoc = gql`
     ...RichTextElementData
     ...SoCardData
     ...SoColumnData
+    ...SoFooterData
     ...SoRowData
     ...SoSectionData
     ...TestimonialElementData
@@ -533,6 +552,7 @@ export const CompositionComponentNodeDataFragmentDoc = gql`
     ...RichTextElementData
     ...SoCardData
     ...SoColumnData
+    ...SoFooterData
     ...SoRowData
     ...SoSectionData
     ...TestimonialElementData
@@ -618,6 +638,7 @@ export const BlogPostPageDataFragmentDoc = gql`
     ...RichTextElementData
     ...SoCardData
     ...SoColumnData
+    ...SoFooterData
     ...SoRowData
     ...SoSectionData
     ...TestimonialElementData
@@ -666,6 +687,7 @@ export const LandingPageDataFragmentDoc = gql`
     ...RichTextElementData
     ...SoCardData
     ...SoColumnData
+    ...SoFooterData
     ...SoRowData
     ...SoSectionData
     ...TestimonialElementData
@@ -694,6 +716,7 @@ export const LandingPageDataFragmentDoc = gql`
     ...RichTextElementData
     ...SoCardData
     ...SoColumnData
+    ...SoFooterData
     ...SoRowData
     ...SoSectionData
     ...TestimonialElementData
@@ -802,6 +825,7 @@ ${QuoteBlockDataFragmentDoc}
 ${RichTextElementDataFragmentDoc}
 ${SoCardDataFragmentDoc}
 ${SoColumnDataFragmentDoc}
+${SoFooterDataFragmentDoc}
 ${SoRowDataFragmentDoc}
 ${SoColumnPropertyDataFragmentDoc}
 ${SoSectionDataFragmentDoc}
@@ -1210,6 +1234,7 @@ export const getContentByIdDocument = gql`
       ...RichTextElementData
       ...SoCardData
       ...SoColumnData
+      ...SoFooterData
       ...SoRowData
       ...SoSectionData
       ...TestimonialElementData
@@ -1254,6 +1279,7 @@ ${QuoteBlockDataFragmentDoc}
 ${RichTextElementDataFragmentDoc}
 ${SoCardDataFragmentDoc}
 ${SoColumnDataFragmentDoc}
+${SoFooterDataFragmentDoc}
 ${SoRowDataFragmentDoc}
 ${SoColumnPropertyDataFragmentDoc}
 ${SoSectionDataFragmentDoc}
@@ -1327,6 +1353,7 @@ ${QuoteBlockDataFragmentDoc}
 ${RichTextElementDataFragmentDoc}
 ${SoCardDataFragmentDoc}
 ${SoColumnDataFragmentDoc}
+${SoFooterDataFragmentDoc}
 ${SoRowDataFragmentDoc}
 ${SoColumnPropertyDataFragmentDoc}
 ${SoSectionDataFragmentDoc}
