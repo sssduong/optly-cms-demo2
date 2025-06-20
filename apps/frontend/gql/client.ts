@@ -1067,6 +1067,33 @@ ${LinkItemDataFragmentDoc}
 ${BlogPostPageMenuBlockFragmentDoc}
 ${ReferenceDataFragmentDoc}
 ${ButtonBlockDataFragmentDoc}`;
+export const getSoFooterDataDocument = gql`
+    query getSoFooterData($domain: String, $locale: [Locales!]) {
+  appLayout: SoFooter(
+    where: {_or: [{appIdentifiers: {exist: false}}, {_and: [{appIdentifiers: {exist: true}}, {appIdentifiers: {eq: $domain}}]}]}
+    locale: $locale
+  ) {
+    items {
+      _metadata {
+        key
+        displayName
+      }
+      ColumnTextOne {
+        json
+        html
+      }
+      ColumnTextTwo {
+        json
+        html
+      }
+      ColumnTextThree {
+        json
+        html
+      }
+    }
+  }
+}
+    `;
 export const getLocalesDocument = gql`
     query getLocales {
   schema: __schema {
@@ -1417,6 +1444,9 @@ export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = 
     },
     getHeaderData(variables?: Schema.getHeaderDataQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<Schema.getHeaderDataQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<Schema.getHeaderDataQuery>(getHeaderDataDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'getHeaderData', 'query', variables);
+    },
+    getSoFooterData(variables?: Schema.getSoFooterDataQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<Schema.getSoFooterDataQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<Schema.getSoFooterDataQuery>(getSoFooterDataDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'getSoFooterData', 'query', variables);
     },
     getLocales(variables?: Schema.getLocalesQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<Schema.getLocalesQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<Schema.getLocalesQuery>(getLocalesDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'getLocales', 'query', variables);

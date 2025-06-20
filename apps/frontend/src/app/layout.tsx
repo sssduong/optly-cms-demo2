@@ -4,7 +4,8 @@ import { Figtree } from "next/font/google";
 import "./globals.scss";
 import { Body, ThemeProvider } from "@/components/theme"
 import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+// import Footer from "@/components/layout/footer";
+import SoFooter from "@/components/layout/so_site_footer";
 import { factory } from '@/components/factory';
 import { createClient } from '@remkoj/optimizely-graph-client';
 
@@ -98,7 +99,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div className="flex min-h-screen flex-col justify-between">
               <Header locale={ locale } ctx={ ctx } />
               <main className="grow">{ children }</main>
-              <Footer ctx={ ctx } />
+              {/*<Footer ctx={ ctx } />*/}
+              <SoFooter ctx={ ctx } />
             </div>
             <OptimizelyOneGadget />
           </OptimizelyOneProvider>
