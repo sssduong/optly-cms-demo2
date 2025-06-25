@@ -365,16 +365,6 @@ export const SoSectionDataFragmentDoc = gql`
   }
 }
     `;
-export const SoSectionTwoDataFragmentDoc = gql`
-    fragment SoSectionTwoData on SoSectionTwo {
-  Modifiers
-  Content {
-    ...IContentListItem
-    ...ImageMediaComponentData
-    ...VideoMediaComponentData
-  }
-}
-    `;
 export const TestimonialElementDataFragmentDoc = gql`
     fragment TestimonialElementData on TestimonialElement {
   customerName
@@ -417,6 +407,41 @@ export const BlankSectionDataFragmentDoc = gql`
     fragment BlankSectionData on BlankSection {
   _metadata {
     key
+  }
+}
+    `;
+export const SoSectionTwoDataFragmentDoc = gql`
+    fragment SoSectionTwoData on SoSectionTwo {
+  Modifiers
+  Content {
+    ...BlockData
+    ...ArticleListElementData
+    ...ButtonBlockData
+    ...CTAElementData
+    ...CarouselBlockData
+    ...ContentRecsElementData
+    ...ContinueReadingComponentData
+    ...HeadingElementData
+    ...HeroBlockData
+    ...ImageElementData
+    ...LayoutSettingsBlockData
+    ...MegaMenuGroupBlockData
+    ...MenuNavigationBlockData
+    ...OdpEmbedBlockData
+    ...PageSeoSettingsData
+    ...ParagraphElementData
+    ...QuoteBlockData
+    ...RichTextElementData
+    ...SoCardData
+    ...SoColumnData
+    ...SoFooterData
+    ...SoRowData
+    ...SoSectionData
+    ...SoSectionTwoData
+    ...TestimonialElementData
+    ...TextBlockData
+    ...VideoElementData
+    ...BlankSectionData
   }
 }
     `;

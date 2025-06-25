@@ -1,4 +1,4 @@
 fragment SoSectionTwoData on SoSectionTwo {
   Modifiers
-  Content { ...IContentListItem }
+  Content { ...BlockData }
 }
