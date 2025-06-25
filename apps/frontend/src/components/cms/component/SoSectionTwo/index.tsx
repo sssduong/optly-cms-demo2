@@ -7,9 +7,7 @@ import clsx from "clsx";
  * Section Two - Sports Orbit
  * 
  */
-export const SoSectionTwoComponent : CmsComponent<SoSectionTwoDataFragment> = ({ data, children, ctx }) => {
-  const componentName = 'Section Two - Sports Orbit';
-  const componentInfo = '';
+export const SoSectionTwoComponent : CmsComponent<SoSectionTwoDataFragment> = ({ data, ctx }) => {
   return (
     <div className={clsx('section', data.Modifiers)}>
       <div className="container">
