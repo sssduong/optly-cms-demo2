@@ -44,6 +44,7 @@ type Documents = {
     "fragment SoRowData on SoRow {\n  Modifiers\n  Column {\n    ...SoColumnPropertyData\n  }\n}": typeof types.SoRowDataFragmentDoc,
     "fragment SoRowPropertyData on SoRowProperty {\n  Modifiers\n  Column {\n    ...SoColumnPropertyData\n  }\n}": typeof types.SoRowPropertyDataFragmentDoc,
     "fragment SoSectionData on SoSection {\n  Modifiers\n  Row {\n    ...SoRowPropertyData\n  }\n}": typeof types.SoSectionDataFragmentDoc,
+    "fragment SoSectionTwoData on SoSectionTwo {\n  Modifiers\n  Content {\n    ...IContentListItem\n  }\n}": typeof types.SoSectionTwoDataFragmentDoc,
     "fragment TestimonialElementData on TestimonialElement {\n  customerName\n  customerLocation\n  customerImage {\n    ...ReferenceData\n  }\n  referenceTitle\n  referenceText {\n    json\n  }\n}": typeof types.TestimonialElementDataFragmentDoc,
     "fragment TextBlockData on TextBlock {\n  overline: TextBlockOverline\n  headingSize: TextBlockHeadingSize\n  heading: TextBlockHeading\n  description: TextBlockDescription {\n    json\n    html\n  }\n  center: TextCenter\n  width: TextBlockWidth\n  className: TextClassName\n}": typeof types.TextBlockDataFragmentDoc,
     "fragment VideoElementData on VideoElement {\n  title\n  video {\n    ...ReferenceData\n  }\n  placeholder {\n    ...ReferenceData\n  }\n}": typeof types.VideoElementDataFragmentDoc,
@@ -101,6 +102,7 @@ const documents: Documents = {
     "fragment SoRowData on SoRow {\n  Modifiers\n  Column {\n    ...SoColumnPropertyData\n  }\n}": types.SoRowDataFragmentDoc,
     "fragment SoRowPropertyData on SoRowProperty {\n  Modifiers\n  Column {\n    ...SoColumnPropertyData\n  }\n}": types.SoRowPropertyDataFragmentDoc,
     "fragment SoSectionData on SoSection {\n  Modifiers\n  Row {\n    ...SoRowPropertyData\n  }\n}": types.SoSectionDataFragmentDoc,
+    "fragment SoSectionTwoData on SoSectionTwo {\n  Modifiers\n  Content {\n    ...IContentListItem\n  }\n}": types.SoSectionTwoDataFragmentDoc,
     "fragment TestimonialElementData on TestimonialElement {\n  customerName\n  customerLocation\n  customerImage {\n    ...ReferenceData\n  }\n  referenceTitle\n  referenceText {\n    json\n  }\n}": types.TestimonialElementDataFragmentDoc,
     "fragment TextBlockData on TextBlock {\n  overline: TextBlockOverline\n  headingSize: TextBlockHeadingSize\n  heading: TextBlockHeading\n  description: TextBlockDescription {\n    json\n    html\n  }\n  center: TextCenter\n  width: TextBlockWidth\n  className: TextClassName\n}": types.TextBlockDataFragmentDoc,
     "fragment VideoElementData on VideoElement {\n  title\n  video {\n    ...ReferenceData\n  }\n  placeholder {\n    ...ReferenceData\n  }\n}": types.VideoElementDataFragmentDoc,
@@ -262,6 +264,10 @@ export function gql(source: "fragment SoRowPropertyData on SoRowProperty {\n  Mo
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(source: "fragment SoSectionData on SoSection {\n  Modifiers\n  Row {\n    ...SoRowPropertyData\n  }\n}"): (typeof documents)["fragment SoSectionData on SoSection {\n  Modifiers\n  Row {\n    ...SoRowPropertyData\n  }\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment SoSectionTwoData on SoSectionTwo {\n  Modifiers\n  Content {\n    ...IContentListItem\n  }\n}"): (typeof documents)["fragment SoSectionTwoData on SoSectionTwo {\n  Modifiers\n  Content {\n    ...IContentListItem\n  }\n}"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

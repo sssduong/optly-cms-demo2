@@ -365,6 +365,16 @@ export const SoSectionDataFragmentDoc = gql`
   }
 }
     `;
+export const SoSectionTwoDataFragmentDoc = gql`
+    fragment SoSectionTwoData on SoSectionTwo {
+  Modifiers
+  Content {
+    ...IContentListItem
+    ...ImageMediaComponentData
+    ...VideoMediaComponentData
+  }
+}
+    `;
 export const TestimonialElementDataFragmentDoc = gql`
     fragment TestimonialElementData on TestimonialElement {
   customerName
@@ -440,6 +450,7 @@ export const SoColumnPropertyDataFragmentDoc = gql`
     ...SoFooterData
     ...SoRowData
     ...SoSectionData
+    ...SoSectionTwoData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -485,6 +496,7 @@ export const ContinueReadingComponentDataFragmentDoc = gql`
     ...SoFooterData
     ...SoRowData
     ...SoSectionData
+    ...SoSectionTwoData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -521,6 +533,7 @@ export const CarouselBlockDataFragmentDoc = gql`
     ...SoFooterData
     ...SoRowData
     ...SoSectionData
+    ...SoSectionTwoData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -555,6 +568,7 @@ export const CompositionComponentNodeDataFragmentDoc = gql`
     ...SoFooterData
     ...SoRowData
     ...SoSectionData
+    ...SoSectionTwoData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -641,6 +655,7 @@ export const BlogPostPageDataFragmentDoc = gql`
     ...SoFooterData
     ...SoRowData
     ...SoSectionData
+    ...SoSectionTwoData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -690,6 +705,7 @@ export const LandingPageDataFragmentDoc = gql`
     ...SoFooterData
     ...SoRowData
     ...SoSectionData
+    ...SoSectionTwoData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -719,6 +735,7 @@ export const LandingPageDataFragmentDoc = gql`
     ...SoFooterData
     ...SoRowData
     ...SoSectionData
+    ...SoSectionTwoData
     ...TestimonialElementData
     ...TextBlockData
     ...VideoElementData
@@ -830,6 +847,7 @@ ${SoRowDataFragmentDoc}
 ${SoColumnPropertyDataFragmentDoc}
 ${SoSectionDataFragmentDoc}
 ${SoRowPropertyDataFragmentDoc}
+${SoSectionTwoDataFragmentDoc}
 ${TestimonialElementDataFragmentDoc}
 ${TextBlockDataFragmentDoc}
 ${VideoElementDataFragmentDoc}
@@ -1264,6 +1282,7 @@ export const getContentByIdDocument = gql`
       ...SoFooterData
       ...SoRowData
       ...SoSectionData
+      ...SoSectionTwoData
       ...TestimonialElementData
       ...TextBlockData
       ...VideoElementData
@@ -1311,6 +1330,7 @@ ${SoRowDataFragmentDoc}
 ${SoColumnPropertyDataFragmentDoc}
 ${SoSectionDataFragmentDoc}
 ${SoRowPropertyDataFragmentDoc}
+${SoSectionTwoDataFragmentDoc}
 ${TestimonialElementDataFragmentDoc}
 ${TextBlockDataFragmentDoc}
 ${VideoElementDataFragmentDoc}
@@ -1385,6 +1405,7 @@ ${SoRowDataFragmentDoc}
 ${SoColumnPropertyDataFragmentDoc}
 ${SoSectionDataFragmentDoc}
 ${SoRowPropertyDataFragmentDoc}
+${SoSectionTwoDataFragmentDoc}
 ${TestimonialElementDataFragmentDoc}
 ${TextBlockDataFragmentDoc}
 ${VideoElementDataFragmentDoc}
