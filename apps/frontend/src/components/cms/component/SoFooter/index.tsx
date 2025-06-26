@@ -6,15 +6,15 @@ import { SoFooterDataFragmentDoc, type SoFooterDataFragment } from "@/gql/graphq
  * Footer - Sports Orbit
  *
  */
-export const SoFooterComponent : CmsComponent<SoFooterDataFragment> = ({ data, children }) => {
+export const SoFooterComponent : CmsComponent<SoFooterDataFragment> = ({ data, ctx }) => {
     return (
         /* TODO: Use section component */
         <footer className="p-b-md p-t-sm section-standout site-footer d-print-none">
           <div className="container">
             <div className="row">
-              <div className="col-md-4"><RichText text={ data.ColumnTextOne?.json } /></div>
-              <div className="col-md-4"><RichText text={ data.ColumnTextTwo?.json } /></div>
-              <div className="col-md-4"><RichText text={ data.ColumnTextThree?.json } /></div>
+              <div className="col-md-4"><RichText text={ data.ColumnTextOne?.json } ctx={ctx} /></div>
+              <div className="col-md-4"><RichText text={ data.ColumnTextTwo?.json } ctx={ctx} /></div>
+              <div className="col-md-4"><RichText text={ data.ColumnTextThree?.json } ctx={ctx} /></div>
             </div>
           </div>
         </footer>

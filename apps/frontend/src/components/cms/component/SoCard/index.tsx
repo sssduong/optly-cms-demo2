@@ -8,7 +8,7 @@ import Link from "@/components/shared/cms_link";
  * Card - Sports Orbit
  * A card for Sports Orbit
  */
-export const SoCardComponent : CmsComponent<SoCardDataFragment> = ({ data }) => {
+export const SoCardComponent : CmsComponent<SoCardDataFragment> = ({ data, ctx }) => {
     return (
         <div className="card h-100 pos-rel">
           <Image
@@ -23,7 +23,7 @@ export const SoCardComponent : CmsComponent<SoCardDataFragment> = ({ data }) => 
             <h3 className="card-title">{ data.Heading }</h3>
 
             <div className="color-gray-dark text-left">
-              <RichText text={ data.Teaser?.json } />
+              <RichText text={ data.Teaser?.json } ctx={ctx} />
             </div>
 
             <Link href={{ url: data.Link, text: "Read More" }} className="mt-3 d-inline-block" />
