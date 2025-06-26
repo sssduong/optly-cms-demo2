@@ -1,4 +1,4 @@
 fragment SoColumnData on SoColumn {
   ColumnClasses
-  ColumnContent { ...IContentListItem }
+  ColumnContent { ...BlockData }
 }

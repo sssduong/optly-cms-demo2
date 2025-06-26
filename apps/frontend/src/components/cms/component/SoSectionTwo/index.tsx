@@ -11,7 +11,7 @@ export const SoSectionTwoComponent : CmsComponent<SoSectionTwoDataFragment> = ({
   return (
     <div className={clsx('section', data.Modifiers)}>
       <div className="container">
-        <CmsContentArea fieldName="Content" items={data.Content} className="w-full" ctx={ctx} />
+        <CmsContentArea fieldName="Content" items={data.Content} className="w-100" ctx={ctx} />
       </div>
     </div>
   );

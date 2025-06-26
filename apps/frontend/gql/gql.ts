@@ -38,7 +38,7 @@ type Documents = {
     "fragment QuoteBlockData on QuoteBlock {\n  quote: QuoteText\n  color: QuoteColor\n  active: QuoteActive\n  name: QuoteProfileName\n  profilePicture: QuoteProfilePicture {\n    ...ReferenceData\n  }\n  location: QuoteProfileLocation\n}": typeof types.QuoteBlockDataFragmentDoc,
     "fragment RichTextElementData on RichTextElement {\n  text {\n    json\n    html\n  }\n}": typeof types.RichTextElementDataFragmentDoc,
     "fragment SoCardData on SoCard {\n  Image {\n    ...ReferenceData\n  }\n  Heading\n  Teaser {\n    json\n    html\n  }\n  Link {\n    ...LinkData\n  }\n}": typeof types.SoCardDataFragmentDoc,
-    "fragment SoColumnData on SoColumn {\n  ColumnClasses\n  ColumnContent {\n    ...IContentListItem\n  }\n}": typeof types.SoColumnDataFragmentDoc,
+    "fragment SoColumnData on SoColumn {\n  ColumnClasses\n  ColumnContent {\n    ...BlockData\n  }\n}": typeof types.SoColumnDataFragmentDoc,
     "fragment SoColumnPropertyData on SoColumnProperty {\n  ColumnClasses\n  ColumnContent {\n    ...IContentListItem\n    ...BlockData\n  }\n}": typeof types.SoColumnPropertyDataFragmentDoc,
     "fragment SoFooterData on SoFooter {\n  ColumnTextOne {\n    json\n    html\n  }\n  ColumnTextTwo {\n    json\n    html\n  }\n  ColumnTextThree {\n    json\n    html\n  }\n}": typeof types.SoFooterDataFragmentDoc,
     "fragment SoRowData on SoRow {\n  Modifiers\n  Column {\n    ...SoColumnPropertyData\n  }\n}": typeof types.SoRowDataFragmentDoc,
@@ -96,7 +96,7 @@ const documents: Documents = {
     "fragment QuoteBlockData on QuoteBlock {\n  quote: QuoteText\n  color: QuoteColor\n  active: QuoteActive\n  name: QuoteProfileName\n  profilePicture: QuoteProfilePicture {\n    ...ReferenceData\n  }\n  location: QuoteProfileLocation\n}": types.QuoteBlockDataFragmentDoc,
     "fragment RichTextElementData on RichTextElement {\n  text {\n    json\n    html\n  }\n}": types.RichTextElementDataFragmentDoc,
     "fragment SoCardData on SoCard {\n  Image {\n    ...ReferenceData\n  }\n  Heading\n  Teaser {\n    json\n    html\n  }\n  Link {\n    ...LinkData\n  }\n}": types.SoCardDataFragmentDoc,
-    "fragment SoColumnData on SoColumn {\n  ColumnClasses\n  ColumnContent {\n    ...IContentListItem\n  }\n}": types.SoColumnDataFragmentDoc,
+    "fragment SoColumnData on SoColumn {\n  ColumnClasses\n  ColumnContent {\n    ...BlockData\n  }\n}": types.SoColumnDataFragmentDoc,
     "fragment SoColumnPropertyData on SoColumnProperty {\n  ColumnClasses\n  ColumnContent {\n    ...IContentListItem\n    ...BlockData\n  }\n}": types.SoColumnPropertyDataFragmentDoc,
     "fragment SoFooterData on SoFooter {\n  ColumnTextOne {\n    json\n    html\n  }\n  ColumnTextTwo {\n    json\n    html\n  }\n  ColumnTextThree {\n    json\n    html\n  }\n}": types.SoFooterDataFragmentDoc,
     "fragment SoRowData on SoRow {\n  Modifiers\n  Column {\n    ...SoColumnPropertyData\n  }\n}": types.SoRowDataFragmentDoc,
@@ -243,7 +243,7 @@ export function gql(source: "fragment SoCardData on SoCard {\n  Image {\n    ...
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function gql(source: "fragment SoColumnData on SoColumn {\n  ColumnClasses\n  ColumnContent {\n    ...IContentListItem\n  }\n}"): (typeof documents)["fragment SoColumnData on SoColumn {\n  ColumnClasses\n  ColumnContent {\n    ...IContentListItem\n  }\n}"];
+export function gql(source: "fragment SoColumnData on SoColumn {\n  ColumnClasses\n  ColumnContent {\n    ...BlockData\n  }\n}"): (typeof documents)["fragment SoColumnData on SoColumn {\n  ColumnClasses\n  ColumnContent {\n    ...BlockData\n  }\n}"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

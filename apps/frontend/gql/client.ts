@@ -323,16 +323,6 @@ export const SoCardDataFragmentDoc = gql`
   }
 }
     `;
-export const SoColumnDataFragmentDoc = gql`
-    fragment SoColumnData on SoColumn {
-  ColumnClasses
-  ColumnContent {
-    ...IContentListItem
-    ...ImageMediaComponentData
-    ...VideoMediaComponentData
-  }
-}
-    `;
 export const SoFooterDataFragmentDoc = gql`
     fragment SoFooterData on SoFooter {
   ColumnTextOne {
@@ -488,6 +478,41 @@ export const SoRowDataFragmentDoc = gql`
   Modifiers
   Column {
     ...SoColumnPropertyData
+  }
+}
+    `;
+export const SoColumnDataFragmentDoc = gql`
+    fragment SoColumnData on SoColumn {
+  ColumnClasses
+  ColumnContent {
+    ...BlockData
+    ...ArticleListElementData
+    ...ButtonBlockData
+    ...CTAElementData
+    ...CarouselBlockData
+    ...ContentRecsElementData
+    ...ContinueReadingComponentData
+    ...HeadingElementData
+    ...HeroBlockData
+    ...ImageElementData
+    ...LayoutSettingsBlockData
+    ...MegaMenuGroupBlockData
+    ...MenuNavigationBlockData
+    ...OdpEmbedBlockData
+    ...PageSeoSettingsData
+    ...ParagraphElementData
+    ...QuoteBlockData
+    ...RichTextElementData
+    ...SoCardData
+    ...SoColumnData
+    ...SoFooterData
+    ...SoRowData
+    ...SoSectionData
+    ...SoSectionTwoData
+    ...TestimonialElementData
+    ...TextBlockData
+    ...VideoElementData
+    ...BlankSectionData
   }
 }
     `;
