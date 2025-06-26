@@ -7,12 +7,12 @@ import clsx from "clsx";
  * Column - Sports Orbit
  * 
  */
-export const SoColumnComponent : CmsComponent<SoColumnDataFragment> = ({ data, children, ctx }) => {
+export const SoColumnComponent : CmsComponent<SoColumnDataFragment> = ({ data, ctx }) => {
   const componentName = 'Column - Sports Orbit';
   const componentInfo = '';
   return (
-    <div className={clsx('col', data.Modifiers)}>
-      <CmsContentArea fieldName="ColumnContent" items={data.ColumnContent} className="w-100" ctx={ctx} />
+    <div className={clsx('col', data.ColumnClasses)}>
+      <CmsContentArea fieldName="ColumnContent" items={data.ColumnContent} className="d-flex h-100" ctx={ctx} />
     </div>
   );
 };
