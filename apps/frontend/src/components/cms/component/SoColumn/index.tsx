@@ -8,8 +8,6 @@ import clsx from "clsx";
  * 
  */
 export const SoColumnComponent : CmsComponent<SoColumnDataFragment> = ({ data, ctx }) => {
-  const componentName = 'Column - Sports Orbit';
-  const componentInfo = '';
   return (
     <div className={clsx('col', data.ColumnClasses)}>
       <CmsContentArea fieldName="ColumnContent" items={data.ColumnContent} className="d-flex h-100" ctx={ctx} />
